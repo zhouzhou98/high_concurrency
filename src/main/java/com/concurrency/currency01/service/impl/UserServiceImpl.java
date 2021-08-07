@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService {
                  int id=i+ finalCurrentPageNo *pageSize;
                  User user =new User();
                  user.setId(id);
-                 user.setName("huanglaoxie:"+id);
+                 user.setName("zhouzhou:"+id);
                  userList.add(user);
                }
                atomicInt.addAndGet( userMapper.batchSave(userList));
