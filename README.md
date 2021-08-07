@@ -446,8 +446,8 @@ public class UserServiceImpl implements UserService {
         return  "ok";
     }
 }
-
+```
 
 结果如下：
-![avatar](./img/img.png)
+![avatar](img/img.png)
 ![avatar](./img/img_1.png)
