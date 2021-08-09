@@ -374,9 +374,9 @@ public class UserController {
 ```
 
 接下来是最核心的代码
-这里借鉴分片思想，将三百万的数据按每次分片20000条数据进行插入，首先开启100的定长线程池，
+这里借鉴分片思想，将三百万的数据按每次分片20000条数据进行插入，首先开启32的定长线程池，线程池数量最优为计算机核数*2
 ```java
-ExecutorService pool = Executors.newFixedThreadPool(100);
+ExecutorService pool = Executors.newFixedThreadPool(32);
 ```
 通过runnable，存入20000条数据，由atomic计算插入的数量，最后通过执行线程池的命令进行数据插入
 ```java
