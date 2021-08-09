@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public String hanlder() {
-        ExecutorService pool = Executors.newFixedThreadPool(100);
+        ExecutorService pool = Executors.newFixedThreadPool(32);
         int totalPageNo = 150;
         int pageSize = 20000;
         long start = System.currentTimeMillis();
